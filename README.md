@@ -1,5 +1,5 @@
 ### study-of-basic-gates
-
+Date: 04.12.2025
 **AIM:** 
 
 To study and verify the truth table of logic gates in Quartus II using Verilog programming.
@@ -63,17 +63,43 @@ Y= A⊕B
 
 
 **PROGRAM**
+```
+module Gate_1 (
+    input  wire a,     // Input A
+    input  wire b,     // Input B
+    output wire and_out,
+    output wire or_out,
+    output wire not_out,   // only on A
+    output wire nand_out,
+    output wire nor_out,
+    output wire xor_out,
+    output wire xnor_out
+);
+
+    assign and_out  = a & b;      // AND gate
+    assign or_out   = a | b;      // OR gate
+    assign not_out  = ~a;         // NOT gate (on input A)
+    assign nand_out = ~(a & b);   // NAND gate
+    assign nor_out  = ~(a | b);   // NOR gate
+    assign xor_out  = a ^ b;      // XOR gate
+    assign xnor_out = ~(a ^ b);   // XNOR gate
+
+endmodule
+```
 
 Program for logic gates and verify its truth table in quartus using Verilog programming
 
- Developed by: RegisterNumber: 
+ Developed by: karthik.J
+ RegisterNumber: 25017529
  
 **Logic symbol & Truthtable**
+<img width="896" height="617" alt="Screenshot 2025-12-04 195242" src="https://github.com/user-attachments/assets/c208d27d-bad7-4dfa-9a74-6fd6171ad873" />
 
 **RTL realization Output:** 
 
 **RTL**
+<img width="1209" height="316" alt="Screenshot 2025-12-04 195405" src="https://github.com/user-attachments/assets/b160c90a-0988-425e-9364-946de54e979f" />
 
 **Result:**
-
+Thus, the truth table of logic gates in Quartus II using Verilog programming is studied and verified.
 
